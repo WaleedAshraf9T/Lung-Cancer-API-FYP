@@ -4,7 +4,7 @@ from fastapi.security.api_key import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.services.prediction_service import PredictionService
-from app.schemas.request_response import PredictionResponse, ErrorResponse
+from app.schemas.request_response import PredictionResponse, ErrorResponse, SuccessResponse
 import logging
 import uvicorn
 import traceback
@@ -48,6 +48,13 @@ async def verify_api_key(api_key: str = Security(api_key_header)):
         )
     return api_key
 
+@app.get("/", response_model=SuccessResponse)
+async def root():
+    """
+    Healthcheck endpoint
+    """
+    return {"message": "API is launched and working fine"}
+    
 @app.post(
     f"{settings.API_V1_STR}/predict",
     response_model=PredictionResponse,

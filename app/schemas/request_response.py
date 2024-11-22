@@ -11,3 +11,6 @@ class PredictionResponse(BaseModel):
 class ErrorResponse(BaseModel):
     error: str
     details: str = None
+
+class SuccessResponse(BaseModel):
+    message: str
