@@ -1,0 +1,12 @@
+# render.yaml
+services:
+  - type: web
+    name: lung-cancer-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8000
