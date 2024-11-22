@@ -328,3 +328,5 @@ RuntimeError: Failed to make prediction: Error processing image: 'utf-8' codec c
 2024-11-22 17:37:23,661 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
 2024-11-22 17:37:23,993 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
 2024-11-22 17:37:23,993 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 21:13:28,274 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 21:22:44,132 - app.main - INFO - Successful prediction for file: Malignant case (6).jpg
