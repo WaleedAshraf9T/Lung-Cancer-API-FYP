@@ -1,0 +1,330 @@
+2024-11-21 17:17:03,870 - app.models.model_loader - ERROR - Error loading models: Unable to synchronously open file (file signature not found)
+2024-11-21 17:18:26,006 - app.models.model_loader - ERROR - Error loading models: name 'load_model' is not defined
+2024-11-21 17:18:54,109 - app.models.model_loader - ERROR - Error loading models: name 'load_model' is not defined
+2024-11-21 17:19:00,628 - app.models.model_loader - ERROR - Error loading models: name 'load_model' is not defined
+2024-11-21 17:19:07,451 - app.models.model_loader - ERROR - Error loading models: name 'load_model' is not defined
+2024-11-21 17:22:01,703 - app.models.model_loader - ERROR - Error loading models: Unable to synchronously open file (file signature not found)
+2024-11-21 17:22:08,176 - app.models.model_loader - ERROR - Error loading models: Unable to synchronously open file (file signature not found)
+2024-11-21 17:23:11,648 - app.models.model_loader - ERROR - Error loading models: Unable to synchronously open file (file signature not found)
+2024-11-21 17:25:09,051 - app.models.model_loader - ERROR - Error loading models: Unable to synchronously open file (file signature not found)
+2024-11-21 17:44:49,095 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 17:44:53,090 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 17:57:10,732 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 17:57:11,072 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:00:38,449 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:00:38,796 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:00:44,875 - app.services.prediction_service - ERROR - Prediction error: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:00:44,875 - app.main - ERROR - Prediction error: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:04:28,832 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:04:29,272 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:04:44,677 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:04:45,014 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:05:08,646 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:05:08,977 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:05:47,440 - app.services.prediction_service - ERROR - Prediction error: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:05:47,441 - app.services.prediction_service - ERROR - Full traceback: Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 26, in process_image
+    image = Image.open(image_bytes).convert('RGB')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\venv\Lib\site-packages\PIL\Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 20, in predict
+    tensor = self.image_processor.process_image(image_bytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 33, in process_image
+    raise ValueError(f"Error processing image: {str(e)}")
+ValueError: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+2024-11-21 18:05:47,441 - app.main - ERROR - Prediction error: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:06:06,452 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:06:06,784 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 18:06:15,624 - app.services.prediction_service - ERROR - Prediction error: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:06:15,625 - app.services.prediction_service - ERROR - Full traceback: Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 26, in process_image
+    image = Image.open(image_bytes).convert('RGB')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\venv\Lib\site-packages\PIL\Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 20, in predict
+    tensor = self.image_processor.process_image(image_bytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 33, in process_image
+    raise ValueError(f"Error processing image: {str(e)}")
+ValueError: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+2024-11-21 18:06:15,625 - app.main - ERROR - Prediction error: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:06:15,626 - app.main - ERROR - Full traceback: Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 26, in process_image
+    image = Image.open(image_bytes).convert('RGB')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\venv\Lib\site-packages\PIL\Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 20, in predict
+    tensor = self.image_processor.process_image(image_bytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 33, in process_image
+    raise ValueError(f"Error processing image: {str(e)}")
+ValueError: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\main.py", line 79, in predict
+    result = prediction_service.predict(contents)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 56, in predict
+    raise RuntimeError(f"Failed to make prediction: {str(e)}")
+RuntimeError: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte2024-11-21 18:12:44,850 - app.services.prediction_service - ERROR - Prediction error: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:12:44,850 - app.services.prediction_service - ERROR - Full traceback: Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 26, in process_image
+    image = Image.open(image_bytes).convert('RGB')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\venv\Lib\site-packages\PIL\Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 20, in predict
+    tensor = self.image_processor.process_image(image_bytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 33, in process_image
+    raise ValueError(f"Error processing image: {str(e)}")
+ValueError: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+2024-11-21 18:12:44,850 - app.main - ERROR - Prediction error: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2024-11-21 18:12:44,851 - app.main - ERROR - Full traceback: Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 26, in process_image
+    image = Image.open(image_bytes).convert('RGB')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\venv\Lib\site-packages\PIL\Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 20, in predict
+    tensor = self.image_processor.process_image(image_bytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\utils\image_processing.py", line 33, in process_image
+    raise ValueError(f"Error processing image: {str(e)}")
+ValueError: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\FYP\Code\lung_cancer_api\app\main.py", line 79, in predict
+    result = prediction_service.predict(contents)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FYP\Code\lung_cancer_api\app\services\prediction_service.py", line 56, in predict
+    raise RuntimeError(f"Failed to make prediction: {str(e)}")
+RuntimeError: Failed to make prediction: Error processing image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+
+2024-11-21 18:19:25,583 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 18:19:25,924 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:05:54,672 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 19:05:55,149 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:12:48,183 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 19:12:48,575 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:14:04,631 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 19:14:04,987 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:14:11,953 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 19:14:12,338 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:16:00,960 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 19:16:01,349 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-21 19:16:19,942 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:16:20,350 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:16:20,491 - app.main - INFO - Successful prediction for file: Normalcase(114).jpg
+2024-11-21 19:16:41,190 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:16:41,320 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:16:41,328 - app.main - INFO - Successful prediction for file: Bengincase(43).jpg
+2024-11-21 19:16:46,951 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:16:47,073 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:16:47,083 - app.main - INFO - Successful prediction for file: Malignantcase(371).jpg
+2024-11-21 19:16:53,906 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:16:54,034 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:16:54,045 - app.main - INFO - Successful prediction for file: Normalcase(115).jpg
+2024-11-21 19:17:31,281 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:17:31,411 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:17:31,420 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-21 19:17:59,568 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:17:59,681 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:17:59,691 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-21 19:23:29,027 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:23:29,169 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:23:29,179 - app.main - INFO - Successful prediction for file: Bengincase(41).jpg
+2024-11-21 19:23:40,909 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:23:41,035 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:23:41,045 - app.main - INFO - Successful prediction for file: Bengincase(42).jpg
+2024-11-21 19:23:52,404 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:23:52,537 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:23:52,546 - app.main - INFO - Successful prediction for file: Bengincase(43).jpg
+2024-11-21 19:24:00,566 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:24:00,691 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:24:00,701 - app.main - INFO - Successful prediction for file: Normalcase(113).jpg
+2024-11-21 19:24:07,996 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-21 19:24:08,120 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-21 19:24:08,130 - app.main - INFO - Successful prediction for file: Normalcase(114).jpg
+2024-11-21 22:44:21,953 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-21 22:44:22,465 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 04:55:25,737 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-22 04:56:08,403 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 04:57:29,570 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:57:31,813 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:57:31,820 - app.main - INFO - Successful prediction for file: Malignantcase(79).jpg
+2024-11-22 04:57:52,930 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:57:54,027 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:57:54,028 - app.main - INFO - Successful prediction for file: Bengincase(42).jpg
+2024-11-22 04:58:05,581 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:58:06,816 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:58:06,818 - app.main - INFO - Successful prediction for file: Bengincase(43).jpg
+2024-11-22 04:58:16,642 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:58:17,723 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:58:17,726 - app.main - INFO - Successful prediction for file: Normalcase(115).jpg
+2024-11-22 04:58:31,321 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:58:32,592 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:58:32,593 - app.main - INFO - Successful prediction for file: Normalcase(114).jpg
+2024-11-22 04:58:42,648 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:58:43,737 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:58:43,746 - app.main - INFO - Successful prediction for file: Normalcase(113).jpg
+2024-11-22 04:58:52,926 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:58:54,059 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:58:54,060 - app.main - INFO - Successful prediction for file: Malignantcase(371).jpg
+2024-11-22 04:59:02,079 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:59:03,353 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:59:03,358 - app.main - INFO - Successful prediction for file: Malignantcase(370).jpg
+2024-11-22 04:59:10,156 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:59:11,277 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:59:11,280 - app.main - INFO - Successful prediction for file: Malignantcase(369).jpg
+2024-11-22 04:59:17,809 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:59:18,899 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:59:18,904 - app.main - INFO - Successful prediction for file: Bengincase(43).jpg
+2024-11-22 04:59:30,373 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:59:31,519 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:59:31,520 - app.main - INFO - Successful prediction for file: Bengincase(42).jpg
+2024-11-22 04:59:38,376 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 04:59:39,482 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 04:59:39,484 - app.main - INFO - Successful prediction for file: Bengincase(41).jpg
+2024-11-22 05:00:09,295 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:10,439 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:10,439 - app.main - INFO - Successful prediction for file: Bengincase(1).jpg
+2024-11-22 05:00:17,504 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:18,743 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:18,744 - app.main - INFO - Successful prediction for file: Bengincase(2).jpg
+2024-11-22 05:00:24,876 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:25,998 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:25,999 - app.main - INFO - Successful prediction for file: Bengincase(8).jpg
+2024-11-22 05:00:34,923 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:36,104 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:36,105 - app.main - INFO - Successful prediction for file: Bengincase(14).jpg
+2024-11-22 05:00:45,788 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:46,889 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:46,894 - app.main - INFO - Successful prediction for file: Normalcase(7).jpg
+2024-11-22 05:00:53,191 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:00:54,254 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:00:54,258 - app.main - INFO - Successful prediction for file: Normalcase(4).jpg
+2024-11-22 05:01:03,010 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:01:04,276 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:01:04,281 - app.main - INFO - Successful prediction for file: Normalcase(5).jpg
+2024-11-22 05:01:14,300 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:01:15,528 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:01:15,539 - app.main - INFO - Successful prediction for file: Bengincase(107).jpg
+2024-11-22 05:03:04,282 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-22 05:03:05,359 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 05:04:06,352 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:04:07,668 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:04:07,676 - app.main - INFO - Successful prediction for file: Bengincase(6).jpg
+2024-11-22 05:04:14,312 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:04:15,005 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:04:15,024 - app.main - INFO - Successful prediction for file: Bengincase(1).jpg
+2024-11-22 05:04:20,439 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:04:21,144 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:04:21,158 - app.main - INFO - Successful prediction for file: Bengincase(23).jpg
+2024-11-22 05:05:30,144 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:05:30,956 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:05:30,958 - app.main - INFO - Successful prediction for file: fc727c0e5c598fa45e387e2ccfa80b_gallery.jpg
+2024-11-22 05:05:47,801 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:05:48,503 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:05:48,505 - app.main - INFO - Successful prediction for file: Normalcase(7).jpg
+2024-11-22 05:05:56,023 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:05:56,875 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:05:56,879 - app.main - INFO - Successful prediction for file: Normalcase(193).jpg
+2024-11-22 05:06:04,770 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:06:05,471 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:06:05,484 - app.main - INFO - Successful prediction for file: Normalcase(268).jpg
+2024-11-22 05:06:14,944 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 05:06:15,653 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 05:06:15,658 - app.main - INFO - Successful prediction for file: Normalcase(3).jpg
+2024-11-22 05:07:09,413 - absl - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2024-11-22 05:07:10,211 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 17:17:52,367 - app.models.model_loader - ERROR - Error loading models: Expected state_dict to be dict-like, got <class 'torch.nn.modules.container.Sequential'>.
+2024-11-22 17:25:44,559 - app.models.model_loader - ERROR - Error loading models: File format not supported: filepath=settings.VGG16_PATH. Keras 3 only supports V3 `.keras` and `.weights.h5` files, or legacy V1/V2 `.h5` files.
+2024-11-22 17:27:01,140 - app.models.model_loader - ERROR - Error loading models: No module named 'sklearn'
+2024-11-22 17:30:01,199 - app.models.model_loader - INFO - All models loaded successfully
+2024-11-22 17:30:51,969 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:30:52,687 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:30:52,711 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:31:29,396 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:31:29,732 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:31:29,737 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:31:51,080 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:31:51,445 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:31:51,445 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:32:02,437 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:32:02,773 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:32:02,773 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:32:23,796 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:32:24,116 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:32:24,137 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:32:45,221 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:32:45,543 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:32:45,543 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:32:57,118 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:32:57,445 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:32:57,445 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:33:12,835 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:33:13,154 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:33:13,154 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:33:42,043 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:33:42,366 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:33:42,366 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:34:05,186 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:34:05,499 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:34:05,515 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:34:26,268 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:34:26,610 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:34:26,610 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:34:52,125 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:34:52,450 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:34:52,450 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:35:37,525 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:35:37,871 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:35:37,871 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:36:34,215 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:36:34,527 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:36:34,540 - app.main - INFO - Successful prediction for file: image.jpg
+2024-11-22 17:37:23,661 - app.services.prediction_service - INFO - VGG16 input shape: (1, 224, 224, 3)
+2024-11-22 17:37:23,993 - app.services.prediction_service - INFO - Combined features shape: (1, 34304)
+2024-11-22 17:37:23,993 - app.main - INFO - Successful prediction for file: image.jpg
